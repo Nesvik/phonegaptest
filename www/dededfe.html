@@ -1,0 +1,264 @@
+
+GitHub GitHub
+
+    Explore GitHub
+    Search
+    Features
+    Blog
+
+    299
+    77
+
+public jtsage / jquery-mobile-datebox
+
+    Code
+    Network
+    Pull Requests 2
+    Issues 11
+    Graphs
+
+    Tags 10
+
+    Files
+    Commits
+    Branches 4
+
+jquery-mobile-datebox / demos / mode / timebox.html
+jtsage 11 months ago
+Update the mode demos, start on option demos. Fix a few typos in pars…
+
+1 contributor
+file 95 lines (80 sloc) 4.633 kb
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+
+	
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jQueryMobile - DateBox Demos</title>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/latest/jquery.mobile.css" />
+<link type="text/css" href="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.min.css" rel="stylesheet" />
+<link type="text/css" href="http://dev.jtsage.com/cdn/simpledialog/latest/jquery.mobile.simpledialog.min.css" rel="stylesheet" />
+<link type="text/css" href="http://dev.jtsage.com/jQM-DateBox/css/demos.css" rel="stylesheet" />
+
+<!-- NOTE: Script load order is significant! -->
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/mobile/latest/jquery.mobile.js"></script>
+<script type="text/javascript" src="http://dev.jtsage.com/jquery.mousewheel.min.js"></script>
+<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.core.min.js"></script>
+<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.mode.calbox.min.js"></script>
+<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.mode.datebox.min.js"></script>
+<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.mode.flipbox.min.js"></script>
+<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.mode.durationbox.min.js"></script>
+<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.mode.slidebox.min.js"></script>
+<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/i18n/jquery.mobile.datebox.i18n.en_US.utf8.js"></script>
+
+<script type="text/javascript" src="http://dev.jtsage.com/cdn/simpledialog/latest/jquery.mobile.simpledialog.min.js"></script>
+<script type="text/javascript" src="http://dev.jtsage.com/jQM-DateBox/demos/extras.js"></script>
+<script type="text/javascript" src="http://dev.jtsage.com/gpretty/prettify.js"></script>
+<link type="text/css" href="http://dev.jtsage.com/gpretty/prettify.css" rel="stylesheet" />
+<script type="text/javascript">
+$('div').live('pagecreate', function() {
+prettyPrint()
+});
+</script>
+
+</head>
+<body>
+<div data-role="page" data-theme="c" id="timeIndex">
+<div data-role="header" data-position="fixed">
+<h1>jQueryMobile - DateBox</h1>
+<a href="../../" data-icon="home" data-iconpos="notext">Home</a>
+</div>
+<div data-role="content" data-theme="c">
+<div class="content-secondary">
+<div id="jqm-homeheader">
+<h1 id="jqm-logo"><img src="../jquery-logo-db.png" alt="jQuery Mobile Framework :: DateBox" /></h1>
+<p>A Date and Time Picker plugin for jQueryMobile</p>
+</div>
+
+<div class="modedemos sidebar"></div>
+</div>
+
+<div class="content-primary">
+<div data-role="collapsible-set" data-mini="true" data-theme="c" data-content-theme="d">
+
+<div data-role="collapsible" data-collapsed="false">
+<h2>Time Default</h2>
+<p>Using the time mode is as simple as setting the 'mode' option to "timebox".</p>
+
+<div data-role="fieldcontain">
+<label for="deftime">Some Time</label><input name="deftime" type="date" data-role="datebox" id="deftime" data-options='{"mode": "timebox"}' />
+</div>
+
+<pre class="prettyprint">&lt;label for="mydate"&gt;Some Time&lt;/label&gt;
+
+&lt;input name="mydate" id="mydate" type="date" data-role="datebox"
+   data-options='{"mode": "timebox"}'&gt;</pre>
+</div>
+<div data-role="collapsible">
+<h2>Force Clock Mode</h2>
+<p>To force a 12 or 24 hour clock, set 'overrideTimeFomat'</p>
+
+<div data-role="fieldcontain">
+<label for="timehalf">Some Time</label><input name="timehalf" type="date" data-role="datebox" id="timehalf" data-options='{"mode": "timebox", "overrideTimeFormat": 24}' />
+</div>
+
+<pre class="prettyprint">&lt;label for="mydate"&gt;Some Time&lt;/label&gt;
+
+&lt;input name="mydate" id="mydate" type="date" data-role="datebox"
+   data-options='{"mode": "timebox", "overrideTimeFormat": 24}'&gt;</pre>
+</div>
+<div data-role="collapsible">
+<h2>Theme Options</h2>
+<ul data-role="listview" data-inset="true">
+<li><h3>themeButton</h3><p>Theme swatch for +/- Buttons</p></li>
+<li><h3>themeInput</h3><p>Theme swatch for input elements</p></li>
+</ul>
+</div>
+</div>
+
+</div>
+<div data-role="footer" data-position="fixed">
+</div>
+</div>
+</html>
+
+
+
+GitHub
+    About us
+    Blog
+    Contact & support
+    GitHub Enterprise
+    Site status
+
+Applications
+    GitHub for Mac
+    GitHub for Windows
+    GitHub for Eclipse
+    GitHub mobile apps
+
+Services
+    Gauges: Web analytics
+    Speaker Deck: Presentations
+    Gist: Code snippets
+    Job board
+
+Documentation
+    GitHub Help
+    Developer API
+    GitHub Flavored Markdown
+    GitHub Pages
+
+More
+    Training
+    Students & teachers
+    The Shop
+    Plans & pricing
+    The Octodex
+
+© 2013 GitHub Inc. All rights reserved.
+
+    Terms of Service
+    Privacy
+    Security
+
