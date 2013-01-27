@@ -1,42 +1,102 @@
 <!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Hello World</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <title>
+        </title>
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+        <link rel="stylesheet" href="my.css" />
+        <link rel="stylesheet" href="jqm-datebox.min" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.2.0/jquery.mobile-1.2.0.min.js">
+        </script>
+        <script src="my.js">
+        </script>
+        <script src="jqm-datebox.core.min.js">
+        </script>
+        <script src="jqm-datebox.mode.datebox.min.js">
+        </script>
+        <!-- User-generated css -->
+        <style>
+        </style>
+        <!-- User-generated js -->
+        <script>
+            try {
+
+    $(function() {
+
+    });
+
+  } catch (error) {
+    console.error("Your javascript has an error: " + error);
+  }
+        </script>
     </head>
     <body>
-        <div class="app">
-            <h1>PhoneGap</h1>
-            <div id="deviceready">
-                <p class="status pending blink">Connecting to Device</p>
-                <p class="status complete blink hide">Device is Ready</p>
+        <!-- Home -->
+        <div data-role="page" id="page1">
+            <div data-theme="a" data-role="header">
+                <h5>
+                    Ordreoversikt
+                </h5>
+            </div>
+            <div data-role="content">
+                <h3>
+                    Nye ordrer
+                </h3>
+                <ul data-role="listview" data-divider-theme="b" data-inset="true">
+                    <li data-theme="c">
+                        <a href="takeaway1.html" data-rel="dialog" data-transition="pop">
+                            19:55 Takeaway - Carolin...
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="takeaway2.html" data-rel="dialog" data-transition="pop">
+                            19:57 Takeaway - Espen...
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="delivery1.html" data-rel="dialog" data-transition="pop">
+                            20:02 Delivery - Randi Ed...
+                        </a>
+                    </li>
+                    <li data-theme="">
+                        <a href="#page1" data-transition="slide">
+                            20:04 Takeaway - Ingrid De...
+                        </a>
+                    </li>
+                </ul>
+                <ul data-role="listview" data-divider-theme="b" data-inset="true" >
+                    <li data-role="list-divider" role="heading" >
+                        Tre siste aksepterte ordrer
+                    </li>
+                    <li data-theme="c" data-mini="true" >
+                        <a href="#page1" data-transition="slide">
+                            Takeaway - Karl Johan Eri...
+                        </a>
+                    </li>
+                    <li data-theme="c" data-mini="true">
+                        <a href="#page1" data-transition="slide">
+                            Delivery - Arne Hansen
+                        </a>
+                    </li>
+                    <li data-theme="c" data-mini="true">
+                        <a href="#page1" data-transition="slide">
+                            Takeaway - Line Aasen
+                        </a>
+                    </li>
+                    <li data-theme="b" data-mini="true">
+                        <a href="#page1" data-transition="slide">
+                            Se alle
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
-        <script type="text/javascript" src="phonegap.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-        </script>
+                <script type="text/javascript" src="phonegap.js"></script>
     </body>
 </html>
